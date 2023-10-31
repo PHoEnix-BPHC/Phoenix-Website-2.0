@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-  <header>
+  <header className="font-grotesk">
     <Logo />
     <nav className="flex justify-end mr-10 mt-3">
       <Link to='/' className='p-4'>
