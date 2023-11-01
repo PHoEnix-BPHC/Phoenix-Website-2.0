@@ -1,21 +1,19 @@
 const Home = () => {
-  return (
-  <div className="relative ">
-    <div className="absolute mt-[170px] right-[300px]">
-      <div className="flex flex-col items-center space-y-[60px] max-w-[1000px]">
-        <div className="absolute text-center text-black text-xl font-normal font-gothic p-4">
-          BPHC’s Electronics Association
-        </div>
-        <div className="text-red-600 text-xxl font-gothic">
-          PHoEnix
-        </div>
-        <div className="text-center text-black text-lg font-bold font-grotesk">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aperiam similique sunt ea adipisci expedita impedit earum culpa, fuga sequi.
-        </div>
-      </div>
-    </div>
-  </div>
-  );
+	return (
+		<>
+			<div className="grid grid-rows-[75vh_100vh] grid-columns-[100vw] items-center justify-items-center p-[1%]">
+				<div className="text-center">
+					<p>BPHC's Electronics Association</p>
+					<h1 className="bg-gradient-to-r from-red-500 to-yellow-500 text-[15vh]">PHoEnix</h1>
+					<p>dhfajkhfjdkashfal</p>
+				</div>
+
+				<div className="self-start pt-[20vh]">
+					<h1 className="bg-gradient-to-r from-red-500 to-yellow-500 text-[5vh]">WhatWeDo</h1>
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default Home;
