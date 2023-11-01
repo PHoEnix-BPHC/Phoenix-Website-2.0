@@ -3,7 +3,7 @@ import logoSvg from '../assets/phoenix-logo-cropped.svg';
 
 const Footer = () => {
   	return (
-		<div className="grid grid-cols-3 items-start justify-items-center p-[5vh]">
+		<div className="grid grid-cols-3 items-start justify-items-center p-[3vh]">
 			<img src={logoSvg} alt="Phoenix Logo" className="w-[30%]" />
 			<span>
 				<h1 className="bg-gradient-to-r from-red-500 to-yellow-500">Links</h1>
