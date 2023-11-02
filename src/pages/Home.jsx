@@ -3,7 +3,7 @@ import centralSquiggle from '../assets/centralSquiggle.svg';
 const Home = () => {
 	return (
 		<div className="font-grotesk">	
-			<div className="absolute top-0 left-0 grid grid-rows-[100vh] grid-cols-[100vw] justify-items-center items-center">
+			<div className="z-[-1] absolute top-0 left-0 grid grid-rows-[100vh] grid-cols-[100vw] justify-items-center items-center">
 				<img className="h-[80%]" src={centralSquiggle} />
 			</div>
 
