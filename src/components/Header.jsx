@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
     return (
 		<header className="font-grotesk grid grid-rows-[15vh] grid-cols-2 p-[3vh]">
-			<img src={logoSvg} alt="Phoenix Logo" className="w-[15%]" />
+			<img src={logoSvg} alt="Phoenix Logo" className="w-[12%]" />
 			<nav className="flex justify-end">
 				<Link to='/' className="p-[3%]">Home</Link>
 				<Link to='/projects' className="p-[3%]">Projects</Link>
