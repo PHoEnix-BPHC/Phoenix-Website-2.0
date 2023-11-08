@@ -16,6 +16,8 @@ export default {
 			red: "#cc0000",
 			yellow: "#FFFF00",
 			transparent: "#00000000",
+			lightestgray: "#e0e0e0",
+			lightgray: "#c9c9c9",
 		},
 		fontSize: {
 			sm: "14px", 
