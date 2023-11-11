@@ -13,6 +13,7 @@ export default {
 			}, 
 		},
 		colors: {
+			white: "#FFFFFF",
 			red: "#cc0000",
 			yellow: "#FFFF00",
 			transparent: "#00000000",
