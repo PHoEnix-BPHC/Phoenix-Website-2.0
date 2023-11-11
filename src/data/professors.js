@@ -201,7 +201,7 @@ const professors = [
     id: 21,
     faculty: "Dr. Parikshit Sahatiya",
     designation: "Assistant Professor",
-    qualification: "Ph.D (IIT Hyderabad)",
+    qualification: "Ph.D (IIT Hyderabad)", 
     joinedBits: "Dec 2018",
     experiences: "Research Scientist (Redpine Signals), Visiting Professor, Purdue University, USA, Visiting Professor, Tufts University, USA",
     interests: "Flexible and Wearable Electronics, 2D Materials-based Electronics, Broadband Photodetectors, Resistive memories, Transient Electronics, VOC sensing, Papertronics, etc.",

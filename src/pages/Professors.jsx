@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import professors from '../data/professors.js';
+import ProfCard from '../components/profCard.jsx';
 
 const Professors = () => {
 
@@ -56,11 +57,12 @@ const Professors = () => {
 	}
 
 	return (
-		<div>
+		<div className="bg-slate-100">
+			
 			<input className="box-border m-[5vw] w-[88vw] p-[1vw] rounded bg-lightestgray focus:bg-lightgray outline-none" type="text" placeholder="Search..." onChange={newSearch}></input>
 
 			<h1 className="text-[5vw] m-[1vw]">Professors</h1>
-
+			<ProfCard />
 			<ul className="m-[2vw]">{profDataJsx}</ul>
 		</div>
 	)
