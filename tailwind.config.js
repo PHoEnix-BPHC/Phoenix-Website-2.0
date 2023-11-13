@@ -11,14 +11,15 @@ export default {
 				gothic: ['Dela Gothic One', 'sans-serif'],
 				grotesk: ['Space Grotesk', 'sans-serif'],
 			}, 
-		},
-		colors: {
-			white: "#FFFFFF",
-			red: "#cc0000",
-			yellow: "#FFFF00",
-			transparent: "#00000000",
-			lightestgray: "#e0e0e0",
-			lightgray: "#c9c9c9",
+		
+			colors: {
+				white: "#FFFFFF",
+				red: "#cc0000",
+				yellow: "#FFFF00",
+				transparent: "#00000000",
+				lightestgray: "#e0e0e0",
+				lightgray: "#c9c9c9",
+			},
 		},
 		fontSize: {
 			sm: "14px", 
