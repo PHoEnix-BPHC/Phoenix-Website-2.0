@@ -10,49 +10,49 @@ const pors = [
         id: 2,
         student: "R.Hariharan" ,
         designation: "Secretary",
-        contact: 6397442450
+        contact: 9096281043
     },
 
     {
         id: 3,
         student: "Shubhanga Gautam" ,
         designation: "Treasurer",
-        contact: 6397442450
+        contact: 9007305787
     },
 
     {
         id: 4,
         student: "Saketh VK" ,
         designation: "Technical Head",
-        contact: 6397442450
+        contact: 9535727478
     },
 
     {
         id: 5,
         student: "Nishitha Deverakonda" ,
         designation: "Design Head",
-        contact: 6397442450
+        contact: 7702393034
     },
 
     {
         id: 6,
         student: "Srivenkat Varma Nandimandalam" ,
         designation: "Editorial Head",
-        contact: 6397442450
+        contact: 6366867333
     },
 
     {
         id: 7,
         student: "Sanchay Ketan Sinha" ,
         designation: "Joint Secretary",
-        contact: 6397442450
+        contact: 7990573763
     },
 
     {
         id: 8,
         student: "Vedant Dutta" ,
         designation: "Joint Treasurer",
-        contact: 6397442450
+        contact: 8073180195
     }
 
 ]
