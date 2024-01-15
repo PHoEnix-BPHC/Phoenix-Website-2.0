@@ -20,8 +20,8 @@ const professors = [
 	},
 	{
     id: 3,
-    faculty: "Prof. Sanket Goel (Professor, Dean-SRCD, PIC-CIIE)",
-    designation: "Professor",
+    faculty: "Prof. Sanket Goel",
+    designation: "Professor, Dean-SRCD, PIC-CIIE",
     qualification: "BS (H - Delhi University), MS (IIT Delhi), PhD (University of Alberta, Canada), Postdoctoral (Stanford University)",
     joinedBits: "2015",
     experiences: "17 Years (2 years postdoc, 3 years public-funded R&D, 12 years academia)",
