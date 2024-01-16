@@ -119,7 +119,8 @@ const Professors = () => {
 
 	return (
 		<div>
-			<div className="m-[5vw] flex flex-col items-center">
+			<div className="m-[5%] flex flex-col items-center">
+			<h1 className="text-[6vw] pb-[1em] text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Professors</h1>
 				<div>
 					<input className="box-border w-[60vw] p-[1vw] rounded bg-lightestgray focus:bg-lightgray outline-none" type="text" placeholder="Search..." onChange={newSearch}></input>
 					<DropdownButton className="inline" variant="danger" title={currentKey}>
@@ -127,7 +128,6 @@ const Professors = () => {
 					</DropdownButton>
 				</div>
 			</div>
-			<h1 className="text-[6vw] m-[1vw] text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Professors</h1>
 			{profDataJsx}
 		</div>
 	)
