@@ -5,16 +5,16 @@ const GuestTalksPage = () => {
   const guestTalksData = [
     {
       title: "Project 1",
-      thumbnail: "https://placekitten.com/300/200", // Replace with the actual image URL
+      thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/330px-HONDA_ASIMO.jpg", // Replace with the actual image URL
       videos: ["https://www.youtube.com/embed/video1", "https://www.youtube.com/embed/video2"],
-      images: ["https://placekitten.com/400/300", "https://placekitten.com/500/400"],
+      images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/330px-HONDA_ASIMO.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/330px-HONDA_ASIMO.jpg"],
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       title: "Project 2",
-      thumbnail: "https://placekitten.com/300/201", // Replace with the actual image URL
+      thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/330px-HONDA_ASIMO.jpg", // Replace with the actual image URL
       videos: ["https://www.youtube.com/embed/video3", "https://www.youtube.com/embed/video4"],
-      images: ["https://placekitten.com/401/301", "https://placekitten.com/501/401"],
+      images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/330px-HONDA_ASIMO.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/HONDA_ASIMO.jpg/330px-HONDA_ASIMO.jpg"],
       description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   ];
