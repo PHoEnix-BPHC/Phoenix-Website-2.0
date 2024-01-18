@@ -14,16 +14,16 @@ const Header = () => {
 		<NavLink to={option.route} 
 			key={`nav option ${index}`}
 			className={ ({isActive}) => {
-				return `p-[3%] ${isActive ? 'bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text' : 'text-black no-underline'}`
+				return `p-[3%] ${isActive ? 'bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text z-1' : 'text-white no-underline z-1'}`
 			} }>
 			{option.label}
 		</NavLink>
 	) );
 
 	return (
-		<header className="font-grotesk grid grid-rows-[15vh] grid-cols-2 p-[3vh]">
+		<header className="font-grotesk grid grid-rows-[15vh] grid-cols-[1fr_2fr] p-[3vh] bg-backgroundCol">
 			<img src={logoSvg} alt="Phoenix Logo" className="h-[90%]" />
-			<nav className="flex justify-end"> { navJsx } </nav>
+			<nav className="flex flex-wrap justify-end text-lg"> { navJsx } </nav>
 		</header>
 	)
 }

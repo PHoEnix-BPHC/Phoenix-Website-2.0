@@ -6,10 +6,19 @@ import {Image, Dropdown, DropdownButton} from 'react-bootstrap';
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import redBlurSvg from "../assets/redBlur.svg"
 
 const Professors = () => {
-
-	let allKeys = ["faculty", "designation", "qualification", "joinedBits", "experiences", "interests", "coursesTaught", "researchLab"]
+	const allKeys = [
+		"faculty", 
+		"designation", 
+		"qualification", 
+		"joinedBits", 
+		"experiences", 
+		"interests", 
+		"coursesTaught", 
+		"researchLab"
+	];
 	let [currentKey, setCurrentKey] = useState(allKeys[0]);
 	let [prevSearchVal, setPrevSearchVal] = useState("");
 
@@ -20,17 +29,34 @@ const Professors = () => {
 
 		for (let i = 2; i < keys.length; ++i) {
 			if (keys[i] === currentKey && highlightLength > 0) {
-				lijsx.push(<li key={i}>
-						<span className="font-bold text-[1.5vw]">{keys[i]}</span>
-						<span className="text-[1.2vw]"> : {vals[i].slice(0, highlightIndex)}</span>
-						<span className="text-[1.2vw] bg-yellow">{vals[i].slice(highlightIndex, highlightIndex + highlightLength)}</span>
-						<span className="text-[1.2vw]">{vals[i].slice(highlightIndex + highlightLength)}</span>
-					</li>);
-			} else {
-				lijsx.push(<li key={i}>
-						<span className="font-bold text-[1.5vw]">{keys[i]}</span>
-						<span className="text-[1.2vw]"> : {vals[i]}</span>
-					</li>);
+				lijsx.push(
+					<li key={i}>
+						<span className="font-bold text-[1.5vw]">
+							{keys[i]}
+							</span>
+						<span className="text-[1.2vw]">
+							: {vals[i].slice(0, highlightIndex)}
+						</span>
+						<span className="text-[1.2vw] bg-yellow">
+							{vals[i].slice(highlightIndex, highlightIndex + highlightLength)}
+						</span>
+						<span className="text-[1.2vw]">
+							{vals[i].slice(highlightIndex + highlightLength)}
+						</span>
+					</li>
+				);
+			} 
+			else {
+				lijsx.push(
+					<li key={i}>
+						<span className="font-bold text-[1.5vw]">
+							{keys[i]}
+						</span>
+						<span className="text-[1.2vw]">
+							: {vals[i]}
+						</span>
+					</li>
+				);
 			}
 		}
 
@@ -40,17 +66,27 @@ const Professors = () => {
 	let allProfDataJsx = professors.map((professor) => {
 		let src = "/src/data/professorImages/" + professor.faculty + ".png";
 
-		return (<Accordion className="w-[100%] h-[100%] rounded border-solid border-8">
-			<AccordionSummary className="justify-items-center" expandIcon={<ExpandMoreIcon />}>
-				<div className="flex flex-col w-full h-full items-center">
-					<Image className="w-[10rem] h-[10rem]" src={src}/>
-					<p className="block text-lg m-[2%]">{professor.faculty}</p>
-				</div>
-			</AccordionSummary>
-			<AccordionDetails>
-				<ul>{liForEachProfessorData(professor)}</ul>
-			</AccordionDetails>
-		</Accordion>)
+		return (
+			<Accordion className="w-[100%] h-[100%] rounded border-solid border-2 bg-transparent text-white"
+				key={professor.faculty}
+			>
+				<AccordionSummary className="justify-items-center" 
+					expandIcon={<ExpandMoreIcon />}
+				>
+					<div className="flex flex-col w-full h-full items-center">
+						<Image className="w-[10rem] h-[10rem]" src={src}/>
+						<p className="block text-lg m-[2%]">
+							{professor.faculty}
+						</p>
+					</div>
+				</AccordionSummary>
+				<AccordionDetails>
+					<ul>
+						{liForEachProfessorData(professor)}
+					</ul>
+				</AccordionDetails>
+			</Accordion>
+		);
 	});
 
 	allProfDataJsx = (
@@ -72,18 +108,26 @@ const Professors = () => {
 			let src = "/src/data/professorImages/" + professor.faculty + ".png";
 			
 			if (lowerKey.includes(lowerSearch)) {
-				return (<Accordion className="w-[100%] h-[100%] rounded border-solid border-8">
-					<AccordionSummary className="justify-items-center" expandIcon={<ExpandMoreIcon />}>
-						<div className="flex flex-col w-full h-full items-center">
-							<Image className="w-[10rem] h-[10rem]" src={src}/>
-							<p className="block text-lg m-[2%]">{professor.faculty}</p>
-						</div>
-					</AccordionSummary>
-					<AccordionDetails>
-						<ul>{liForEachProfessorData(professor, lowerKey.indexOf(lowerSearch), lowerSearch.length)}</ul>
-					</AccordionDetails>
-				</Accordion>)
-			};
+				return (
+					<Accordion className="w-[100%] h-[100%] rounded border-solid border-2 bg-transparent text-white"
+						key={professor.faculty}
+					>
+						<AccordionSummary className="justify-items-center" expandIcon={<ExpandMoreIcon />}>
+							<div className="flex flex-col w-full h-full items-center">
+								<Image className="w-[10rem] h-[10rem]" src={src}/>
+								<p className="block text-lg m-[2%]">
+									{professor.faculty}
+								</p>
+							</div>
+						</AccordionSummary>
+						<AccordionDetails>
+							<ul>
+								{liForEachProfessorData(professor, lowerKey.indexOf(lowerSearch), lowerSearch.length)}
+							</ul>
+						</AccordionDetails>
+					</Accordion>
+				);
+			}
 		});
 
 		// removes undefined/unmatched entries
@@ -94,11 +138,17 @@ const Professors = () => {
 		}
 		//checks for empty/no mathces
 		if (!newProfDataJsx.length) {
-			newProfDataJsx = [<p className="font-bold text-[2vw] text-red">No Valid Matches...</p>]
+			newProfDataJsx = [
+				<p className="font-bold text-[2vw] text-red"
+					key={1}
+				>
+					No Valid Matches...
+				</p>
+			];
 		}
 
 		newProfDataJsx = (
-			<div className="grid grid-cols-2 grid-rows-16 items-center gap-x-[2em] gap-y-[2em] p-[5%]">
+			<div className="grid grid-cols-2 grid-rows-16 items-center gap-x-[2em] gap-y-[2em] p-[5%] ">
 				{newProfDataJsx}
 			</div>
 		)
@@ -106,27 +156,43 @@ const Professors = () => {
 		setProfDataJsx(newProfDataJsx);
 	}
 
-	function dropdownOptionClick(event, key) {
-		setCurrentKey(key);
-		// newSearch(prevSearchVal, false);
-	}
-
-	let dropdownOptions = allKeys.map((key) => {
+	const dropdownOptions = allKeys.map((key) => {
 		return (
-			<Dropdown.Item as="button" className="hover:bg-lightestgray" onClick={(event) => dropdownOptionClick(event, key)}>{key}</Dropdown.Item>
+			<Dropdown.Item 
+				as="button" 
+				className="hover:bg-lightestgray" 
+				onClick={() => setCurrentKey(key)}
+				key={key}
+			>
+				{key}
+			</Dropdown.Item>
 		);
 	});
 
 	return (
-		<div>
-			<div className="m-[5%] flex flex-col items-center">
-			<h1 className="text-[6vw] pb-[1em] text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Professors</h1>
-				<div>
-					<input className="box-border w-[60vw] p-[1vw] rounded bg-lightestgray focus:bg-lightgray outline-none" type="text" placeholder="Search..." onChange={newSearch}></input>
-					<DropdownButton className="inline" variant="danger" title={currentKey}>
-						{dropdownOptions}
-					</DropdownButton>
-				</div>
+		<div className="bg-backgroundCol overflow-hidden relative">
+			<img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} />
+			<img className="absolute w-[70%] left-[-35%] top-[30%]" src={redBlurSvg} />
+			<img className="absolute w-[70%] left-[-35%] top-[60%]" src={redBlurSvg} />
+
+			<img className="absolute w-[70%] left-[65%] top-[15%]" src={redBlurSvg} />
+			<img className="absolute w-[70%] left-[65%] top-[45%]" src={redBlurSvg} />
+			<img className="absolute w-[70%] left-[65%] top-[75%]" src={redBlurSvg} />
+
+			<h1 className="text-[7vw] m-[5vw] mt-0 text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">
+				Professors
+			</h1>
+			<div className="m-[5vw] mt-10 flex items-center gap-2 justify-center">
+				<input 
+					className="box-border w-[60vw] p-[1vw] rounded bg-lightestgray bg-opacity-70 outline-none
+					focus:bg-lightgray focus:bg-opacity-80 focus:border-2 focus:border-red focus:border-opacity-55" 		
+					type="text" 
+					placeholder="Search..." 
+					onChange={newSearch}
+				/>
+				<DropdownButton className="inline" variant="danger" title={currentKey}>
+					{dropdownOptions}
+				</DropdownButton>
 			</div>
 			{profDataJsx}
 		</div>

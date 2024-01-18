@@ -23,9 +23,11 @@ const ProjectsPage = () => {
 		<div>
 			<h1 className="text-[6vw] pb-[1em] text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Projects</h1>
 			<div style={{ display: 'flex', flexWrap: 'wrap' }}>
-				{projectsData.map((project, index) => (
-				<EventCard key={index} {...project} />
-				))}
+				{
+					projectsData.map((project, index) => (
+						<EventCard key={index} {...project} />
+					))
+				}
 			</div>
 		</div>
 	);
