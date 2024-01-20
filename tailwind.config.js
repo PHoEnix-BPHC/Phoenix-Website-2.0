@@ -19,6 +19,7 @@ export default {
 				transparent: "#00000000",
 				lightestgray: "#e0e0e0",
 				lightgray: "#c9c9c9",
+				backgroundCol: "#180404",
 			},
 		},
 		fontSize: {

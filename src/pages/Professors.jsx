@@ -6,6 +6,8 @@ import {Image, Dropdown, DropdownButton} from 'react-bootstrap';
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+import redBlurSvg from "../assets/redBlur.svg"
+
 const Professors = () => {
 	const allKeys = [
 		"faculty", 
@@ -65,7 +67,7 @@ const Professors = () => {
 		let src = "/src/data/professorImages/" + professor.faculty + ".png";
 
 		return (
-			<Accordion className="w-[100%] h-[100%] rounded border-solid border-8"
+			<Accordion className="w-[100%] h-[100%] rounded border-solid border-2 bg-transparent text-white"
 				key={professor.faculty}
 			>
 				<AccordionSummary className="justify-items-center" 
@@ -107,7 +109,7 @@ const Professors = () => {
 			
 			if (lowerKey.includes(lowerSearch)) {
 				return (
-					<Accordion className="w-[100%] h-[100%] rounded border-solid border-8"
+					<Accordion className="w-[100%] h-[100%] rounded border-solid border-2 bg-transparent text-white"
 						key={professor.faculty}
 					>
 						<AccordionSummary className="justify-items-center" expandIcon={<ExpandMoreIcon />}>
@@ -146,7 +148,7 @@ const Professors = () => {
 		}
 
 		newProfDataJsx = (
-			<div className="grid grid-cols-2 grid-rows-16 items-center gap-x-[2em] gap-y-[2em] p-[5%]">
+			<div className="grid grid-cols-2 grid-rows-16 items-center gap-x-[2em] gap-y-[2em] p-[5%] ">
 				{newProfDataJsx}
 			</div>
 		)
@@ -168,8 +170,16 @@ const Professors = () => {
 	});
 
 	return (
-		<div>
-			<h1 className="text-[6vw] m-[1vw] mt-0 text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">
+		<div className="bg-backgroundCol overflow-hidden relative">
+			<img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} />
+			<img className="absolute w-[70%] left-[-35%] top-[30%]" src={redBlurSvg} />
+			<img className="absolute w-[70%] left-[-35%] top-[60%]" src={redBlurSvg} />
+
+			<img className="absolute w-[70%] left-[65%] top-[15%]" src={redBlurSvg} />
+			<img className="absolute w-[70%] left-[65%] top-[45%]" src={redBlurSvg} />
+			<img className="absolute w-[70%] left-[65%] top-[75%]" src={redBlurSvg} />
+
+			<h1 className="text-[7vw] m-[5vw] mt-0 text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">
 				Professors
 			</h1>
 			<div className="m-[5vw] mt-10 flex items-center gap-2 justify-center">
@@ -184,7 +194,7 @@ const Professors = () => {
 					{dropdownOptions}
 				</DropdownButton>
 			</div>
-				{profDataJsx}
+			{profDataJsx}
 		</div>
 	)
 }
