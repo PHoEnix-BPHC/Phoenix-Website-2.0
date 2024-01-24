@@ -21,11 +21,12 @@ const cardStyle = {
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Adjust the shadow as needed
   textDecoration: 'none',
   color: 'inherit',
+  height: '450px'
 };
 
 const imageStyle = {
   width: '100%',
-  maxHeight: '200px',
+  maxHeight: '250px',
   objectFit: 'cover',
   borderRadius: '15px', // Apply the same corner radius as the card
 };
@@ -35,7 +36,7 @@ const overlayStyle = {
   top: 0,
   left: 0,
   width: '100%',
-  height: '100%',
+  height: '200%',
   background: 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3))', // Adjust the gradient as needed
   filter: 'blur(10px)', // Adjust the blur effect as needed
   borderRadius: '15px', // Apply the same corner radius as the card
