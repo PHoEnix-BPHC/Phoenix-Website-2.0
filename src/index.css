@@ -4,3 +4,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background: #250707;
+	/* box-shadow: inset 0 0 5px #180404;  */
+}
+
+::-webkit-scrollbar-thumb {
+	background: #500707;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #400707; 
+}
