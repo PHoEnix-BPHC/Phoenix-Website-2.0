@@ -21,13 +21,13 @@ const ProjectsPage = () => {
 	];
 
 	return (
-		<div className="bg-backgroundCol">
+		<div className="bg-backgroundCol overflow-hidden relative">
 			<img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} />
 
-			<img className="absolute w-[70%] left-[65%] top-[15%]" src={redBlurSvg} />
+			{/* <img className="absolute w-[70%] left-[65%] top-[15%]" src={redBlurSvg} /> */}
 
 			<h1 className="text-[6vw] pb-[1em] text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Projects</h1>
-			<div style={{ display: 'flex', flexWrap: 'wrap' }}>
+			<div className="flex flex-wrap justify-center">
 				{
 					projectsData.map((project, index) => (
 						<EventCard key={index} {...project} />
