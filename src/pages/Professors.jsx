@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import professors from '../data/professors.js';
 
-import {Image, Dropdown, DropdownButton} from 'react-bootstrap';
+import { Image, Dropdown, DropdownButton, Modal } from 'react-bootstrap';
 
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material"
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -31,16 +31,16 @@ const Professors = () => {
 			if (keys[i] === currentKey && highlightLength > 0) {
 				lijsx.push(
 					<li key={i}>
-						<span className="font-bold text-[1.5vw]">
+						<span className="font-bold text-lg">
 							{keys[i]}
 							</span>
-						<span className="text-[1.2vw]">
+						<span className="text-base">
 							: {vals[i].slice(0, highlightIndex)}
 						</span>
-						<span className="text-[1.2vw] bg-yellow">
+						<span className="text-base bg-yellow">
 							{vals[i].slice(highlightIndex, highlightIndex + highlightLength)}
 						</span>
-						<span className="text-[1.2vw]">
+						<span className="text-base">
 							{vals[i].slice(highlightIndex + highlightLength)}
 						</span>
 					</li>
@@ -49,10 +49,10 @@ const Professors = () => {
 			else {
 				lijsx.push(
 					<li key={i}>
-						<span className="font-bold text-[1.5vw]">
+						<span className="font-bold text-base">
 							{keys[i]}
 						</span>
-						<span className="text-[1.2vw]">
+						<span className="text-base">
 							: {vals[i]}
 						</span>
 					</li>
@@ -63,30 +63,40 @@ const Professors = () => {
 		return lijsx;
 	}
 
+	function ProfCard({ name, src, data }) {
+		const [show, setShow] = useState(false);
+
+		const handleShow = () => setShow(true);
+		const handleClose = () => setShow(false);
+
+		return (
+			<>
+				<div className="flex flex-col w-full h-full items-center rounded border-solid border-2 text-white p-[3%] z-1" onClick={handleShow}>
+					<Image className="w-[10rem] h-[10rem]" src={src} />
+					<p className="block text-lg m-[2%]">
+						{name}
+					</p>
+				</div>
+
+				<Modal show={show} onHide={handleClose}>
+					<Modal.Header>
+					<Modal.Title>Professor Details</Modal.Title>
+					</Modal.Header>
+					<Modal.Body>{data}</Modal.Body>
+					<Modal.Footer>
+					</Modal.Footer>
+				</Modal>
+			</>
+		);
+	}
+
 	let allProfDataJsx = professors.map((professor) => {
 		let src = "/src/data/professorImages/" + professor.faculty + ".png";
 
-		return (
-			<Accordion className="w-[100%] h-[100%] rounded border-solid border-2 bg-transparent text-white"
-				key={professor.faculty}
-			>
-				<AccordionSummary className="justify-items-center" 
-					expandIcon={<ExpandMoreIcon />}
-				>
-					<div className="flex flex-col w-full h-full items-center">
-						<Image className="w-[10rem] h-[10rem]" src={src}/>
-						<p className="block text-lg m-[2%]">
-							{professor.faculty}
-						</p>
-					</div>
-				</AccordionSummary>
-				<AccordionDetails>
-					<ul>
-						{liForEachProfessorData(professor)}
-					</ul>
-				</AccordionDetails>
-			</Accordion>
-		);
+		let professorData = (<ul>
+			{liForEachProfessorData(professor)}
+		</ul>)
+		return < ProfCard name={professor.faculty} src={src} data={professorData}/>
 	});
 
 	allProfDataJsx = (
@@ -108,25 +118,10 @@ const Professors = () => {
 			let src = "/src/data/professorImages/" + professor.faculty + ".png";
 			
 			if (lowerKey.includes(lowerSearch)) {
-				return (
-					<Accordion className="w-[100%] h-[100%] rounded border-solid border-2 bg-transparent text-white"
-						key={professor.faculty}
-					>
-						<AccordionSummary className="justify-items-center" expandIcon={<ExpandMoreIcon />}>
-							<div className="flex flex-col w-full h-full items-center">
-								<Image className="w-[10rem] h-[10rem]" src={src}/>
-								<p className="block text-lg m-[2%]">
-									{professor.faculty}
-								</p>
-							</div>
-						</AccordionSummary>
-						<AccordionDetails>
-							<ul>
-								{liForEachProfessorData(professor, lowerKey.indexOf(lowerSearch), lowerSearch.length)}
-							</ul>
-						</AccordionDetails>
-					</Accordion>
-				);
+				let professorData = (<ul>
+					{liForEachProfessorData(professor, lowerKey.indexOf(lowerSearch), lowerSearch.length)}
+				</ul>)
+				return < ProfCard name={professor.faculty} src={src} data={professorData}/>
 			}
 		});
 
