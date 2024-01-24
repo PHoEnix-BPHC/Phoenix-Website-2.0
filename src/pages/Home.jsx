@@ -2,6 +2,7 @@ import React from 'react';
 import centralSquiggle from '../assets/centralSquiggle.svg';
 import WhatWeDoCard from '../components/WhatWeDoCard';
 import whatWeDo from '../data/whatWeDo';
+import redBlurSvg from "../assets/redBlur.svg"
 
 const Home = () => {
   return ( <div className="font-grotesk bg-backgroundCol overflow-hidden relative">
@@ -22,22 +23,19 @@ const Home = () => {
         <p className="text-[1.3vw] text-lightestgray">dhfajkhfjdkashfal</p>
       </div>
 
-        <div className="self-start pt-[10vh]">
-          <h1 className="bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text text-[5vh]">WhatWeDo</h1>
-          <div className="grid grid-cols-3 gap-4">
-          {whatWeDo.map((item) => (
-            <WhatWeDoCard
-              key={item.id}
-              imageUrl={`src/data/whatwedo/${item.id}.jpg`} // Adjust the path accordingly
-              title={item.title}
-              description={item.description}
-              linkTo={item.linkto}
-            />
-          ))}
-          </div>
+      <div className="self-start pt-[10vh]">
+        <h1 className="bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text text-[5vh]">WhatWeDo</h1>
+        <div className="grid grid-cols-3 gap-4">
+        {whatWeDo.map((item) => (
+          <WhatWeDoCard
+            key={item.id}
+            imageUrl={`src/data/whatwedo/${item.id}.jpg`} // Adjust the path accordingly
+            title={item.title}
+            description={item.description}
+            linkTo={item.linkto}
+          />
+        ))}
         </div>
-
-        
       </div>
     </div>
   </div>);
