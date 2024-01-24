@@ -2,6 +2,7 @@ import React from 'react';
 import centralSquiggle from '../assets/centralSquiggle.svg';
 import WhatWeDoCard from '../components/WhatWeDoCard';
 import whatWeDo from '../data/whatWeDo';
+import redBlurSvg from "../assets/redBlur.svg"
 
 const Home = () => {
   return (

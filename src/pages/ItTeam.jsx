@@ -1,12 +1,13 @@
 import React from 'react';
 import itTeam from '../data/itTeam';
+import redBlurSvg from "../assets/redBlur.svg"
 
 const ITTeamCard = ({ id, student, designation, contact }) => {
   // Assuming your images are stored in the /data/itTeamImages folder
   const imagePath = `/data/itTeamImages/itTeam${id}.jpg`; // adjust the path accordingly
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md mb-4" style={{ backgroundColor: '#ffffff', color: '#100606' }}>
+    <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md mb-4 z-1" style={{ backgroundColor: '#ffffff', color: '#100606' }}>
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           <img className="h-48 w-full object-cover md:w-48" src={imagePath} alt={`${student}'s IT Team`} />
@@ -23,8 +24,14 @@ const ITTeamCard = ({ id, student, designation, contact }) => {
 
 const ITTeam = () => {
   return (
-    <>
-      <h1 className="text-[6vw] pb-[1em] text-center bg-gradient-to-r from-red-500 to-yellow-500 text-transparent bg-clip-text">IT Team</h1>
+    <div className="bg-backgroundCol">
+      <img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} />
+
+      <img className="absolute w-[70%] left-[65%] top-[15%]" src={redBlurSvg} />
+      
+      <h1 className="text-[7vw] m-[5vw] mt-0 text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">
+        IT Team 
+			</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 p-8">
         {itTeam.slice(0, 3).map((member) => (
           <ITTeamCard key={member.id} {...member} />
@@ -33,7 +40,7 @@ const ITTeam = () => {
           <ITTeamCard key={member.id} {...member} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
