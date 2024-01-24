@@ -1,10 +1,13 @@
-import { Link } from 'react-router-dom';
-import logoSvg from '../assets/phoenix-logo-cropped.svg';
+import { Link } from "react-router-dom";
+import logoSvg from "../assets/phoenix-logo-cropped.svg";
+import bottomSquiggle from "../assets/bottomSquiggle.svg"
 
 const Footer = () => {
   	return (
 		<div className="grid grid-cols-3 items-start justify-items-center p-[3vh] bg-backgroundCol">
-			<img src={logoSvg} alt="Phoenix Logo" className="w-[30%]" />
+			<span className="flex flex-col items-center">
+				<img src={logoSvg} alt="Phoenix Logo" className="w-[30%]" />
+			</span>
 			<span>
 				<h1 className="text-[3vh] bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Links</h1>
 				<ul className="list-none p-0">
