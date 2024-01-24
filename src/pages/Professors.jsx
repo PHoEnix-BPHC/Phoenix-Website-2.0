@@ -72,7 +72,7 @@ const Professors = () => {
 		return (
 			<>
 				<div className="flex flex-col w-full h-full items-center rounded border-solid border-2 text-white p-[3%] z-1" onClick={handleShow}>
-					<Image className="w-[10rem] h-[10rem]" src={src} />
+					<Image className="w-[10rem] h-[10rem] rounded-lg" src={src} />
 					<p className="block text-lg m-[2%]">
 						{name}
 					</p>
@@ -100,7 +100,7 @@ const Professors = () => {
 	});
 
 	allProfDataJsx = (
-		<div className="grid grid-cols-2 items-center gap-x-[2em] gap-y-[2em] p-[5%]">
+		<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-x-[2em] gap-y-[2em] p-[5%]">
 			{allProfDataJsx}
 		</div>
 	)
@@ -143,7 +143,7 @@ const Professors = () => {
 		}
 
 		newProfDataJsx = (
-			<div className="grid grid-cols-2 grid-rows-16 items-center gap-x-[2em] gap-y-[2em] p-[5%] ">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-16 items-center gap-x-[2em] gap-y-[2em] p-[5%] ">
 				{newProfDataJsx}
 			</div>
 		)
