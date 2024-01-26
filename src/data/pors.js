@@ -31,7 +31,7 @@ const pors = [
 
     {
         id: 6,
-        student: "Srivenkat Varma Nandimandalam" ,
+        student: "Srivenkat Varma " ,
         designation: "Editorial Head",
         contact: 6366867333
     },

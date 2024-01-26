@@ -1,4 +1,4 @@
-import React from 'react';
+/**import React from 'react';
 import pors from '../data/pors';
 import redBlurSvg from "../assets/redBlur.svg";
 
@@ -41,9 +41,9 @@ const Pors = () => {
   );
 };
 
-export default Pors;
+export default Pors;**/
 // the following code is a different version and i am confused which to take, because of differences in size of images this is happening and i am unable to do more
-/** 
+
 import React from 'react';
 import pors from '../data/pors';
 import redBlurSvg from "../assets/redBlur.svg"
@@ -55,7 +55,7 @@ const Card = ({ id, student, designation, contact }) => {
     <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md mb-4 z-1" style={{ backgroundColor: '#ffffff', color: '#100606' }}>
       <div className="md:flex">
         <div className="md:flex-shrink-0">
-          <img className="h-48   w-100 object-cover" src={imagePath} alt={`${student}'s IT Team`} />
+          <img className="h-48  w-full" src={imagePath} alt={`${student}'s IT Team`} />
         </div>
         <div className="p-8">
           <div className="uppercase tracking-wide text-sm text-red-500 font-semibold">{designation}</div>
@@ -89,4 +89,3 @@ const Pors = () => {
 };
 
 export default Pors;
-**/
