@@ -27,12 +27,7 @@ const pors = [
         contact: 9535727478
     },
 
-    {
-        id: 5,
-        student: "Nishitha Deverakonda" ,
-        designation: "Design Head",
-        contact: 7702393034
-    },
+    
 
     {
         id: 6,

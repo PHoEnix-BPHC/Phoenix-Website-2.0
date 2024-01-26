@@ -9,7 +9,7 @@ import MessageSection from '../components/Messages';
 
 const Home = () => {
   return ( <div className="font-grotesk bg-backgroundCol overflow-hidden relative ">
-
+    <div className='container'>
     <img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} />
     
 
@@ -45,6 +45,7 @@ const Home = () => {
     <AboutUs/>
     <MessageSection/>
     <ImageSection/>
+    </div>
   </div>);
 };
 

@@ -63,6 +63,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="bg-backgroundCol overflow-hidden relative">
+      <div className='container'>
       <img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} alt="red blur background" />
 
       <h1 className="text-[6vw] pb-[1em] text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Projects</h1>
@@ -72,6 +73,7 @@ const ProjectsPage = () => {
             <EventCard {...project} />
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

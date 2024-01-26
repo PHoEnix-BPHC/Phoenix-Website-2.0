@@ -64,6 +64,7 @@ const WorkshopsPage = () => {
   return (
     <div className="bg-backgroundCol overflow-hidden relative">
       <img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} alt="red blur background" />
+      <div className='container'>
 
       <h1 className="text-[6vw] pb-[1em] text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Workshops</h1>
       <div className="flex flex-wrap justify-center">
@@ -73,6 +74,7 @@ const WorkshopsPage = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

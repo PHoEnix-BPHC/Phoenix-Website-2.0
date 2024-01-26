@@ -166,6 +166,7 @@ const Professors = () => {
 
 	return (
 		<div className="bg-backgroundCol overflow-hidden relative">
+			<div className='container'>
 			<img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} />
 			<img className="absolute w-[70%] left-[-35%] top-[30%]" src={redBlurSvg} />
 			<img className="absolute w-[70%] left-[-35%] top-[60%]" src={redBlurSvg} />
@@ -190,6 +191,7 @@ const Professors = () => {
 				</DropdownButton>
 			</div>
 			{profDataJsx}
+			</div>
 		</div>
 	)
 }
