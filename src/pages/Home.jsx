@@ -11,7 +11,7 @@ const Home = () => {
   return ( <div className="font-grotesk bg-backgroundCol overflow-hidden relative ">
 
     <img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} />
-    {/* <img className="absolute w-[70%] left-[-35%] top-[50%]" src={redBlurSvg} /> */}
+    
 
     <img className="absolute w-[70%] left-[65%]" src={redBlurSvg} />
 

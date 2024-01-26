@@ -10,8 +10,8 @@ const styles = {
   cardOverlay: {
     
     background: 'linear-gradient(rgba(100,10,10, 0.5), rgba(10,10,100, 0.1))',
-    padding: '50px', // Add some padding to the overlay
-    boxSizing: 'border-box', // Include padding in the overlay size
+    padding: '50px', 
+    boxSizing: 'border-box', 
     borderRadius: '25px',
     display: 'flex',
   flexDirection: 'row',

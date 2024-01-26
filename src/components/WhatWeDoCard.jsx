@@ -16,9 +16,9 @@ const WhatWeDoCard = ({ imageUrl, title, description, linkTo }) => {
 
 const cardStyle = {
   position: 'relative',
-  borderRadius: '15px', // Adjust the corner radius as needed
+  borderRadius: '15px', 
   overflow: 'hidden',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Adjust the shadow as needed
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   textDecoration: 'none',
   color: '#fff',
   height: '100%',
@@ -30,7 +30,7 @@ const imageStyle = {
   width: '100%',
   maxHeight: '250px',
   objectFit: 'cover',
-  borderRadius: '15px', // Apply the same corner radius as the card
+  borderRadius: '15px', 
 };
 
 const overlayStyle = {
@@ -39,16 +39,16 @@ const overlayStyle = {
   left: 0,
   width: '100%',
   height: '100%',
-  background: 'linear-gradient(rgba(240,240,240, 0.5), rgba(240,240,240, 0.1))', // Adjust the gradient as needed
-  borderRadius: '25px', // Apply the same corner radius as the card
+  background: 'linear-gradient(rgba(240,240,240, 0.5), rgba(240,240,240, 0.1))', 
+  borderRadius: '25px', 
   color: '#fff',
-  padding: '20px', // Add some padding to the overlay
-  boxSizing: 'border-box', // Include padding in the overlay size
+  padding: '20px', 
+  boxSizing: 'border-box', 
   filter: 'blur(600px)',
 };
 
 const cardDetailsStyle = {
-  // Add a higher z-index to ensure the text is above the blurred overlay
+  
   position: 'relative',
   zIndex: 1,
   textAlign: 'center',

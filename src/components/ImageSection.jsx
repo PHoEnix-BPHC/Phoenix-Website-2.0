@@ -18,7 +18,7 @@ const ImageCarousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // You can adjust the number of images shown at a time
+    slidesToShow: 3, 
     slidesToScroll: 1,
     responsive: [
       {
