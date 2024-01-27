@@ -64,16 +64,15 @@ const ProjectsPage = () => {
   return (
     <div className="bg-backgroundCol overflow-hidden relative">
       <div className='container'>
-      <img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} alt="red blur background" />
+        <img className="absolute w-[70%] left-[-35%]" src={redBlurSvg} alt="red blur background" />
 
-      <h1 className="text-[6vw] pb-[1em] text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Projects</h1>
-      <div className="flex flex-wrap justify-center">
-        {projectsData.map((project, index) => (
-          <div key={index} className="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 mb-8">
+        <h1 className="text-[4em] sm:text-[5em] pb-[1em] text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">Projects</h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {projectsData.map((project, index) => (
             <EventCard {...project} />
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </div>
   );

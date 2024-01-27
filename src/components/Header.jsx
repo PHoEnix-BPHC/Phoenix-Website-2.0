@@ -21,7 +21,7 @@ const Header = () => {
 	) );
 
 	return (
-		<header className="font-grotesk grid grid-rows-[15vh] grid-cols-[1fr_2fr] p-[3vh] bg-backgroundCol">
+		<header className="font-grotesk grid grid-rows-[10em] sm:grid-rows-[7em] grid-cols-[1fr_2fr] p-[2%] bg-backgroundCol">
 			<img src={logoSvg} alt="Phoenix Logo" className="h-[90%]" />
 			<nav className="flex flex-wrap justify-end text-lg"> { navJsx } </nav>
 		</header>

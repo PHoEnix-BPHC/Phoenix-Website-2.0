@@ -33,7 +33,7 @@ const EventCard = ({ title, thumbnail, videos, images, description }) => {
   const handleModalShow = () => setShowModal(true);
 
   return (
-    <>
+    <div className="flex justify-center my-[3%]">
       <StyledCard>
         <CardImage variant="top" src={thumbnail} />
         <Card.Body>
@@ -66,7 +66,7 @@ const EventCard = ({ title, thumbnail, videos, images, description }) => {
           <p>{description}</p>
         </Modal.Body>
       </Modal>
-    </>
+    </div>
   );
 };
 

@@ -2,6 +2,10 @@
 
 Commmands:
 
-<code>npm i</code>
+run locally:
 
+<code>npm i</code>
 <code>npm run dev</code>
+
+build for production:
+<code>npm run build</code>

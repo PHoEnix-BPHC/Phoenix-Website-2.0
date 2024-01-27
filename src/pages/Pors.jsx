@@ -74,7 +74,7 @@ const Pors = () => {
 
       <img className="absolute w-[70%] left-[65%] top-[15%]" src={redBlurSvg} />
 
-      <h1 className="text-[7vw] m-[5vw] mt-0 text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">
+      <h1 className="text-[4em] sm:text-[5em] m-[5vw] mt-0 text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">
 				PORs
 			</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">

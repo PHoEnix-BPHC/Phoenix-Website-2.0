@@ -175,7 +175,7 @@ const Professors = () => {
 			<img className="absolute w-[70%] left-[65%] top-[45%]" src={redBlurSvg} />
 			<img className="absolute w-[70%] left-[65%] top-[75%]" src={redBlurSvg} />
 
-			<h1 className="text-[7vw] m-[5vw] mt-0 text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">
+			<h1 className="text-[4em] sm:text-[5em] m-[5vw] mt-0 text-center bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text">
 				Professors
 			</h1>
 			<div className="m-[5vw] mt-10 flex items-center gap-2 justify-center">
