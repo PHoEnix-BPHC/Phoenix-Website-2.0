@@ -15,16 +15,18 @@ const images = [
 
 const ImageCarousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, 
-    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '0',
+    slidesToShow: 5,
+    focusOnSelect: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
       {
@@ -39,8 +41,8 @@ const ImageCarousel = () => {
   return (
     <Slider {...settings}>
       {images.map((image, index) => (
-        <div key={index}>
-          <img src={image} alt={`Image ${index + 1}`} style={{ heigth: '100%' }} />
+        <div key={index} className="carousel-item">
+          <img src={image} alt={`Image ${index + 1}`} />
         </div>
       ))}
     </Slider>
@@ -49,12 +51,12 @@ const ImageCarousel = () => {
 
 const ImageSection = () => {
   return (
-    <div>
-      <h1 className="bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text text-[5vh]">
-        Images Section - Scroll left or right
+    <div className="image-section-container">
+      <h1 className="bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text text-[10vh] text-center mb-5">
+        Some of Our Activities
       </h1>
 
-      <div style={{ margin: '5px auto' }}>
+      <div className="carousel-container">
         <ImageCarousel />
       </div>
     </div>

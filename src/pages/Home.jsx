@@ -23,12 +23,12 @@ const Home = () => {
       <div className="text-center">
         <p className="text-[1.9vw] text-white">BPHC's Electronics Association</p>
         <h1 className="font-gothic bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text text-[6vw]">PHoEnix</h1>
-        <p className="text-[1.3vw] text-lightestgray">Perpetual Hankers of Electronics</p>
+        <p className="text-[1.3vw] text-lightestgray">Perpetual Hankerers of Electronics</p>
         <p className="text-[1.3vw] text-lightestgray">Present to You</p>
       </div>
 
       <div className="self-start pt-[10vh]">
-        <h1 className="bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text text-[5vh]">What We Do</h1>
+        <h1 className="bg-gradient-to-r from-red to-yellow text-transparent bg-clip-text text-[10vh] text-center">What We Do</h1>
         <div className="grid grid-cols-3 gap-4">
         {whatWeDo.map((item) => (
           <WhatWeDoCard
